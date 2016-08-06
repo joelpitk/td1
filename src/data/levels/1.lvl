@@ -1,0 +1,165 @@
+!LEVEL
+
+.level {
+	name=the entrance
+	number=1
+}
+	
+.map {
+	width=32
+	height=13
+
+	################################
+	#................####..........#
+	0......*.........#..#..........#
+	#..........###...#..#......###.#
+	#..........#.#...####......#...#
+	#..........###.............#.###
+	#..........###...*.*.......#..E#
+	#..........###.............#####
+	#....*.....#.#...####..........#
+	#..........###...#..#...*......#
+	1................#..#..........#
+	#................####..........#
+	################################
+}
+
+.wave {
+	wave_interval=5
+
+	.mob {
+		number=3
+		type=peasant
+		level=1
+		entrance=0
+		enemy_interval=0
+	}
+
+	.mob {
+		number=3
+		type=peasant
+		level=1
+		entrance=1
+		enemy_interval=0
+	}
+}
+
+.wave {
+	wave_interval=5
+
+	.mob {
+		number=3
+		type=peasant
+		level=2
+		entrance=0
+		enemy_interval=2
+	}
+
+	.mob {
+		number=3
+		type=peasant
+		level=1
+		entrance=1
+		enemy_interval=0
+	}
+}
+
+.wave {
+	wave_interval=5
+
+	.mob {
+		number=7
+		type=peasant
+		level=1
+		entrance=0
+		enemy_interval=2
+	}
+
+	.mob {
+		number=4
+		type=spawner
+		level=1
+		entrance=1
+		enemy_interval=0
+	}
+}
+
+.wave {
+	wave_interval=5
+
+	.mob {
+		number=5
+		type=spawner
+		level=2
+		entrance=0
+		enemy_interval=2
+	}
+
+	.mob {
+		number=4
+		type=bomber
+		level=1
+		entrance=1
+		enemy_interval=0
+	}
+}
+
+.wave {
+	wave_interval=7
+
+	.mob {
+		number=5
+		type=peasant
+		level=2
+		entrance=0
+		enemy_interval=2
+	}
+
+	.mob {
+		number=3
+		type=steamtank
+		level=1
+		entrance=0
+		enemy_interval=0
+	}
+}
+
+.wave {
+	wave_interval=3
+
+	.mob {
+		number=1
+		type=mammothtank
+		level=2
+		entrance=0
+		enemy_interval=2
+	}
+
+	.mob {
+		number=3
+		type=steamtank
+		level=2
+		entrance=1
+		enemy_interval=0
+	}
+}
+
+.wave {
+	wave_interval=0
+
+	.mob {
+		number=2
+		type=mammothtank
+		level=2
+		entrance=0
+		enemy_interval=2
+	}
+
+	.mob {
+		number=2
+		type=spawner
+		level=3
+		entrance=1
+		enemy_interval=0
+	}
+}

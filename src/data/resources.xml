@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <section name="sprites">
+     <!-- TILES -->
+        <sprite name="ground">
+          <image file="/tiles/ground.png"/>
+        </sprite>
+        <sprite name="mountain">
+          <image file="/tiles/mountain.png"/>
+        </sprite>
+        <sprite name="rocks">
+          <image file="/tiles/rocks.png"/>
+        </sprite>
+        <sprite name="entrance">
+          <image file="/tiles/entrance.png"/>
+        </sprite>
+        <sprite name="exit">
+          <image file="/tiles/exit.png"/>
+        </sprite>
+
+     <!-- TOWERS -->
+        <!--GUNTOWER-->
+        <sprite name="guntower">
+          <image file="/towers/guntower/base.png"/>
+        </sprite>
+        <sprite name="guntower_gun">
+          <image file="/towers/guntower/gun.png"/>
+        </sprite>
+        <sprite name="guntower_projectile">
+          <image file="/towers/guntower/projectile.png"/>
+        </sprite>
+        <sprite name="guntower_prev">
+          <image file="/towers/guntower/prev.png"/>
+        </sprite>
+
+
+        <!--AREATOWER-->
+        <sprite name="areatower">
+          <image file="/towers/areatower/base.png"/>
+        </sprite>
+        <sprite name="areatower_gun">
+          <image file="/towers/areatower/gun.png"/>
+        </sprite>
+        <sprite name="areatower_projectile">
+          <image file="/towers/areatower/projectile.png"/>
+        </sprite>
+        <sprite name="areatower_prev">
+          <image file="/towers/areatower/prev.png"/>
+        </sprite>
+
+        <!--CANNONTOWER-->
+        <sprite name="cannontower">
+          <image file="/towers/cannontower/base.png"/>
+        </sprite>
+        <sprite name="cannontower_gun">
+          <image file="/towers/cannontower/gun.png"/>
+        </sprite>
+        <sprite name="cannontower_projectile">
+          <image file="/towers/cannontower/projectile.png"/>
+        </sprite>
+        <sprite name="cannontower_prev">
+          <image file="/towers/cannontower/prev.png"/>
+        </sprite>
+
+     <!--ICETOWER-->
+        <sprite name="icetower">
+          <image file="/towers/icetower/base.png"/>
+        </sprite>
+        <sprite name="icetower_gun">
+          <image file="/towers/icetower/gun.png"/>
+        </sprite>
+        <sprite name="icetower_projectile">
+          <image file="/towers/icetower/projectile.png"/>
+        </sprite>
+        <sprite name="icetower_prev">
+          <image file="/towers/icetower/prev.png"/>
+        </sprite>
+
+       <!--UPGRADES-->
+        <sprite name="upgrade0">
+          <image file="/towers/upgrade0.png"/>
+        </sprite>
+        <sprite name="upgrade1">
+          <image file="/towers/upgrade1.png"/>
+        </sprite>
+        <sprite name="upgrade2">
+          <image file="/towers/upgrade2.png"/>
+        </sprite>
+        <sprite name="upgrade3">
+          <image file="/towers/upgrade3.png"/>
+        </sprite>
+       
+     <!-- MOBS -->
+        <!--PEASANT-->
+        <sprite name="peasant">
+          <image file="/mobs/peasant/1.png"/>
+          <image file="/mobs/peasant/2.png"/>
+          <image file="/mobs/peasant/3.png"/>
+          <image file="/mobs/peasant/4.png"/>
+          <animation loop="yes"/>
+        </sprite>
+        <sprite name="peasant_damage">
+            <image file="/mobs/peasant/hit.png"/>
+            <animation speed="200" loop="no"/>
+        </sprite>
+
+        <!--SPAWNER-->
+        <sprite name="spawner">
+          <image file="/mobs/spawner/1.png"/>
+          <image file="/mobs/spawner/2.png"/>
+          <image file="/mobs/spawner/3.png"/>
+          <image file="/mobs/spawner/4.png"/>
+          <animation loop="yes"/>
+        </sprite>
+        <sprite name="spawner_damage">
+            <image file="/mobs/spawner/hit.png"/>
+            <animation speed="200" loop="no"/>
+        </sprite>
+
+        <!--BOMBER-->
+        <sprite name="bomber">
+          <image file="/mobs/bomber/1.png"/>
+          <image file="/mobs/bomber/2.png"/>
+          <image file="/mobs/bomber/3.png"/>
+          <image file="/mobs/bomber/4.png"/>
+          <animation loop="yes"/>
+        </sprite>
+        <sprite name="bomber_damage">
+            <image file="/mobs/bomber/hit.png"/>
+            <animation speed="200" loop="no"/>
+        </sprite>
+
+        <!--STEAMTANK-->
+        <sprite name="steamtank">
+          <image file="/mobs/steamtank/1.png"/>
+          <image file="/mobs/steamtank/2.png"/>
+          <image file="/mobs/steamtank/3.png"/>
+          <animation loop="yes"/>
+        </sprite>
+        <sprite name="steamtank_damage">
+            <image file="/mobs/steamtank/hit.png"/>
+            <animation speed="200" loop="no"/>
+        </sprite>
+
+        <!--MAMMOTHTANK-->
+        <sprite name="mammothtank">
+          <image file="/mobs/mammothtank/1.png"/>
+          <image file="/mobs/mammothtank/2.png"/>
+          <image file="/mobs/mammothtank/3.png"/>
+          <animation loop="yes"/>
+        </sprite>
+        <sprite name="mammothtank_damage">
+            <image file="/mobs/mammothtank/hit.png"/>
+            <animation speed="200" loop="no"/>
+        </sprite>
+
+        <!--AIRSHIP-->
+        <sprite name="airship">
+          <image file="/mobs/airship/1.png"/>
+          <image file="/mobs/airship/2.png"/>
+          <image file="/mobs/airship/3.png"/>
+          <image file="/mobs/airship/4.png"/>
+          <image file="/mobs/airship/5.png"/>
+          <image file="/mobs/airship/6.png"/>
+          <animation loop="yes"/>
+        </sprite>
+        <sprite name="airship_damage">
+            <image file="/mobs/airship/hit.png"/>
+            <animation speed="200" loop="no"/>
+        </sprite>
+
+        <!--DEAD SPRITES-->
+        <sprite name="deadmob">
+            <image file="/mobs/deadmob.png"/>
+            <animation speed="200" loop="no"/>
+        </sprite>
+        <sprite name="deadmob_mech">
+            <image file="/mobs/deadmob_mech.png"/>
+            <animation speed="200" loop="no"/>
+        </sprite>
+
+    </section>
+
+</resources>

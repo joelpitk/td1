@@ -1,0 +1,327 @@
+!LEVEL
+
+.level {
+	name=maze
+	number=3
+}
+	
+.map {
+	width=64
+	height=15
+
+	################################################################
+	0........#####################.....................#############
+	##.##.##.###..........########.##########..#######.####...##..E#
+	########.###.########.########.#..########.####.#..####.#.#..###
+	##.#.........####...#.####.###.###########.####.#.#####.#.##...#
+	##.#.###.############.#####........#######..###.#..####.#.##.#.#
+	####.###.#.##########.#.###.######.###..##.####.##......#.#..#.#
+	1....###.############.###.#.######...#####.############.#.##.#.#
+	########.#.##########.#####.########.##..#.#####...####.#.##.#.#
+	######..........#####.......######...#####.############.#.#..#.#
+	######.########.##################.................####.#....#.#
+	######..###..##.#..###############.#########..####.#..#.######.#
+	#######.####.##.######....########.##########.####.####.######.#
+	2.......#######........##.....................####.............#
+	################################################################
+}
+
+.wave {
+	wave_interval=5
+
+	.mob {
+		number=3
+		type=peasant
+		level=1
+		entrance=0
+		enemy_interval=0
+	}
+
+	.mob {
+		number=5
+		type=peasant
+		level=2
+		entrance=1
+		enemy_interval=0
+	}
+
+	.mob {
+		number=7
+		type=peasant
+		level=3
+		entrance=2
+		enemy_interval=0
+	}
+}
+
+.wave {
+	wave_interval=5
+
+	.mob {
+		number=6
+		type=peasant
+		level=2
+		entrance=0
+		enemy_interval=2
+	}
+
+	.mob {
+		number=6
+		type=peasant
+		level=1
+		entrance=2
+		enemy_interval=0
+	}
+}
+
+.wave {
+	wave_interval=5
+
+	.mob {
+		number=5
+		type=peasant
+		level=2
+		entrance=0
+		enemy_interval=2
+	}
+
+	.mob {
+		number=3
+		type=steamtank
+		level=1
+		entrance=0
+		enemy_interval=0
+	}
+}
+
+.wave {
+	wave_interval=5
+
+	.mob {
+		number=5
+		type=peasant
+		level=2
+		entrance=1
+		enemy_interval=2
+	}
+
+	.mob {
+		number=5
+		type=peasant
+		level=1
+		entrance=2
+		enemy_interval=0
+	}
+}
+
+.wave {
+	wave_interval=5
+
+	.mob {
+		number=5
+		type=peasant
+		level=2
+		entrance=0
+		enemy_interval=2
+	}
+
+	.mob {
+		number=6
+		type=peasant
+		level=1
+		entrance=2
+		enemy_interval=0
+	}
+}
+
+.wave {
+	wave_interval=5
+
+	.mob {
+		number=4
+		type=spawner
+		level=2
+		entrance=0
+		enemy_interval=4
+	}
+
+	.mob {
+		number=3
+		type=spawner
+		level=2
+		entrance=2
+		enemy_interval=0
+	}
+}
+
+.wave {
+	wave_interval=0
+
+	.mob {
+		number=2
+		type=steamtank
+		level=1
+		entrance=0
+		enemy_interval=2
+	}
+
+	.mob {
+		number=3
+		type=steamtank
+		level=1
+		entrance=1
+		enemy_interval=0
+	}
+
+	.mob {
+	    number=3
+	    type=airship
+	    level=1
+	    entrance=2
+	    enemy_interval=0
+	}
+}
+
+.wave {
+	wave_interval=5
+
+	.mob {
+		number=5
+		type=peasant
+		level=2
+		entrance=1
+		enemy_interval=2
+	}
+
+	.mob {
+		number=5
+		type=peasant
+		level=1
+		entrance=2
+		enemy_interval=0
+	}
+}
+
+.wave {
+	wave_interval=0
+
+	.mob {
+		number=2
+		type=mammothtank
+		level=1
+		entrance=0
+		enemy_interval=2
+	}
+
+	.mob {
+		number=3
+		type=steamtank
+		level=1
+		entrance=1
+		enemy_interval=0
+	}
+}
+
+.wave {
+	wave_interval=5
+
+	.mob {
+		number=5
+		type=steamtank
+		level=2
+		entrance=1
+		enemy_interval=2
+	}
+
+	.mob {
+		number=5
+		type=steamtank
+		level=1
+		entrance=2
+		enemy_interval=0
+	}
+}
+
+.wave {
+	wave_interval=0
+
+	.mob {
+		number=3
+		type=airship
+		level=1
+		entrance=0
+		enemy_interval=2
+	}
+
+	.mob {
+		number=3
+		type=airship
+		level=2
+		entrance=1
+		enemy_interval=0
+	}
+
+	.mob {
+	    number=3
+	    type=airship
+	    level=1
+	    entrance=2
+	    enemy_interval=0
+	}
+}
+
+.wave {
+	wave_interval=0
+
+	.mob {
+		number=4
+		type=mammothtank
+		level=3
+		entrance=0
+		enemy_interval=2
+	}
+
+	.mob {
+		number=4
+		type=mammothtank
+		level=4
+		entrance=1
+		enemy_interval=0
+	}
+
+	.mob {
+	    number=4
+	    type=mammothtank
+	    level=3
+	    entrance=2
+	    enemy_interval=0
+	}
+}
+
+.wave {
+	wave_interval=0
+
+	.mob {
+		number=2
+		type=airship
+		level=4
+		entrance=0
+		enemy_interval=2
+	}
+
+	.mob {
+		number=2
+		type=airship
+		level=4
+		entrance=1
+		enemy_interval=0
+	}
+
+	.mob {
+	    number=2
+	    type=airship
+	    level=4
+	    entrance=2
+	    enemy_interval=0
+	}
+}

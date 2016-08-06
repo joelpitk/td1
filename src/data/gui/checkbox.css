@@ -1,0 +1,69 @@
+checkbox
+{
+	text-gap:3;
+	padding-top:1;
+	padding-bottom:4;
+	text-color:white;
+}
+
+checkbox:disabled
+{
+	text-color:darkgray;
+}
+
+checkbox focus
+{
+	bg-image-sizing-left:3;
+	bg-image-sizing-right:4;
+	bg-image-sizing-top:3;
+	bg-image-sizing-bottom:4;
+	bg-image-sizing:repeat;
+	bg-image:FocusDottedLine; 
+} 
+
+checkbox checker
+{
+	bg-image-sizing:center;
+	preferred-width:13;
+	preferred-height:13;
+}
+
+checkbox checker:checked:normal
+{
+	bg-image:CheckBoxCheckedNormal; 
+}
+
+checkbox checker:checked:hot
+{
+	bg-image:CheckBoxCheckedHot; 
+}
+
+checkbox checker:checked:pressed
+{
+	bg-image:CheckBoxCheckedPressed; 
+}
+
+checkbox checker:checked:disabled
+{
+	bg-image:CheckBoxCheckedDisabled; 
+}
+
+checkbox checker:unchecked:normal
+{
+	bg-image:CheckBoxUncheckedNormal; 
+}
+
+checkbox checker:unchecked:pressed
+{
+	bg-image:CheckBoxUncheckedPressed;
+}
+
+checkbox checker:unchecked:disabled
+{
+	bg-image:CheckBoxUncheckedDisabled; 
+}
+
+checkbox checker:unchecked:hot
+{
+	bg-image:CheckBoxUncheckedHot; 
+}

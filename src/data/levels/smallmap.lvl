@@ -1,0 +1,123 @@
+!LEVEL
+
+.level {
+	name=maze
+	number=1
+}
+	
+.map {
+	width=64
+	height=15
+
+	################################################################
+	0........#####################.....................#############
+	##.##.##.###..........########.##########..#######.####...##..E#
+	########.###.########.########.#..########.####.#..####.#.#..###
+	##.#.........####...#.####.###.###########.####.#.#####.#.##...#
+	##.#.###.############.#####........#######..###.#..####.#.##.#.#
+	####.###.#.##########.#.###.######.###..##.####.##......#.#..#.#
+	1....###.############.###.#.######...#####.############.#.##.#.#
+	########.#.##########.#####.########.##..#.#####...####.#.##.#.#
+	######..........#####.......######...#####.############.#.#..#.#
+	######.########.##################.................####.#....#.#
+	######..###..##.#..###############.#########..####.#..#.######.#
+	#######.####.##.######....########.##########.####.####.######.#
+	2.......#######........##.....................####.............#
+	################################################################
+}
+
+.wave {
+	wave_interval=5
+
+	.mob {
+		number=3
+		type=peasant
+		level=1
+		entrance=0
+		enemy_interval=0
+	}
+
+	.mob {
+		number=3
+		type=peasant
+		level=1
+		entrance=1
+		enemy_interval=0
+	}
+
+	.mob {
+		number=3
+		type=mammothtank
+		level=1
+		entrance=2
+		enemy_interval=0
+	}
+}
+
+.wave {
+	wave_interval=5
+
+	.mob {
+		number=3
+		type=peasant
+		level=2
+		entrance=0
+		enemy_interval=2
+	}
+
+	.mob {
+		number=3
+		type=peasant
+		level=1
+		entrance=0
+		enemy_interval=0
+	}
+}
+
+.wave {
+	wave_interval=5
+
+	.mob {
+		number=5
+		type=peasant
+		level=2
+		entrance=0
+		enemy_interval=2
+	}
+
+	.mob {
+		number=3
+		type=steamtank
+		level=1
+		entrance=0
+		enemy_interval=0
+	}
+}
+
+.wave {
+	wave_interval=0
+
+	.mob {
+		number=2
+		type=steamtank
+		level=1
+		entrance=0
+		enemy_interval=2
+	}
+
+	.mob {
+		number=3
+		type=steamtank
+		level=1
+		entrance=1
+		enemy_interval=0
+	}
+
+	.mob {
+	    number=3
+	    type=airship
+	    level=1
+	    entrance=2
+	    enemy_interval=0
+	}
+}

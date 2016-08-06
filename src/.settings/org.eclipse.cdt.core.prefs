@@ -1,0 +1,3 @@
+#Wed Nov 24 16:08:47 EET 2010
+eclipse.preferences.version=1
+environment/project/cdt.managedbuild.toolchain.gnu.base.456248866=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\n<environment append\="true" appendContributed\="true">\n<variable delimiter\="\:" name\="PKG_CONFIG_PATH" operation\="append" value\="/m/home/home86/jtpitka1/unix/ClanLib/lib/pkgconfig/"/>\n</environment>\n

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <image name="ButtonDefaulted"><image file="images/ButtonDefaulted.png" /></image>
+  <image name="ButtonDisabled"><image file="images/ButtonDisabled.png" /></image>
+  <image name="ButtonNormal"><image file="images/ButtonNormal.png" /></image>
+  <image name="ButtonHot"><image file="images/ButtonHot.png" /></image>
+  <image name="ButtonPressed"><image file="images/ButtonPressed.png" /></image>
+  <image name="ButtonFocus"><image file="images/ButtonFocus.png" /></image>
+
+  <!-- Tower buy buttons -->
+  <image name="ButtonGunTower"><image file="images/ButtonGunTower.png" /></image>
+  <image name="ButtonAreaTower"><image file="images/ButtonAreaTower.png" /></image>
+  <image name="ButtonCannonTower"><image file="images/ButtonCannonTower.png" /></image>
+  <image name="ButtonIceTower"><image file="images/ButtonIceTower.png" /></image>
+  <!-- End of tower buy buttons -->  
+
+  <image name="WindowActive"><image file="images/WindowActive.png" /></image>
+  <image name="WindowBackdrop"><image file="images/WindowBackdrop.png" /></image>
+  <image name="WindowFrameLeftActive"><image file="images/WindowFrameLeftActive.png" /></image>
+  <image name="WindowFrameRightActive"><image file="images/WindowFrameRightActive.png" /></image>
+  <image name="WindowFrameBottomActive"><image file="images/WindowFrameBottomActive.png" /></image>
+  <image name="WindowCloseButtonActivePressed"><image file="images/WindowCloseButtonActivePressed.png"/></image>
+  <image name="WindowCloseButtonActiveHot"><image file="images/WindowCloseButtonActiveHot.png"/></image>
+  <image name="WindowCloseButtonActiveNormal"><image file="images/WindowCloseButtonActiveNormal.png"/></image>
+  <image name="WindowCloseButtonActiveDisabled"><image file="images/WindowCloseButtonActiveDisabled.png"/></image>
+  
+  <image name="PopupMenu"><image file="images/PopupMenu.png" /></image>
+  <image name="PopupMenuSelected"><image file="images/PopupMenuSelected.png" /></image>
+  <image name="PopupMenuSeparator"><image file="images/PopupMenuSeparator.png" /></image>
+  <image name="PopupMenuSubmenuArrow"><image file="images/PopupMenuSubmenuArrow.png" /></image>
+  
+  <image name="LineEditNormal"><image file="images/LineEditNormal.png" /></image>
+  <image name="LineEditHot"><image file="images/LineEditHot.png" /></image>
+  <image name="LineEditDisabled"><image file="images/LineEditDisabled.png" /></image>
+  
+  <image name="CheckBoxCheckedNormal"><image file="images/CheckBoxCheckedNormal.png" /></image>
+  <image name="CheckBoxCheckedHot"><image file="images/CheckBoxCheckedHot.png" /></image>
+  <image name="CheckBoxCheckedPressed"><image file="images/CheckBoxCheckedPressed.png" /></image>
+  <image name="CheckBoxCheckedDisabled"><image file="images/CheckBoxCheckedDisabled.png" /></image>
+  <image name="CheckBoxUncheckedNormal"><image file="images/CheckBoxUncheckedNormal.png" /></image>
+  <image name="CheckBoxUncheckedHot"><image file="images/CheckBoxUncheckedHot.png" /></image>
+  <image name="CheckBoxUncheckedPressed"><image file="images/CheckBoxUncheckedPressed.png" /></image>
+  <image name="CheckBoxUncheckedDisabled"><image file="images/CheckBoxUncheckedDisabled.png" /></image>
+  
+  <image name="FocusDottedLine"><image file="images/FocusDottedLine.png" /></image>
+</resources>

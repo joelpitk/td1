@@ -1,0 +1,267 @@
+#+TITLE:    AS-0.3301 Project Plan: Tower Defense
+#+AUTHOR:    Joel Pitkänen, Joonas Nissinen, Ilari T. Nieminen
+#+EMAIL:     joel.pitkanen@tkk.fi, joonas.nissinen@tkk.fi, ilari.nieminen@tkk.fi
+#+DESCRIPTION: 
+#+KEYWORDS: 
+#+LANGUAGE:  en
+
+* Introduction
+
+This document is a project plan for a tower defense game, to be
+developed during the fall of 2010 for the course AS-0.3301 (C++
+programming). The following sections describe the high-level features
+and the approximate architecture of the game. 
+
+* Specification of requirements
+
+This section describes the basic features that the game will have
+(core features) as well as features that will be added if there is
+enough time (additional features).
+
+# In this section, specify the requirements for your project that you
+# are fulfilling. The requirements that you choose must cover the
+# minimum requirements for your project work topic. Be sure to make a
+# distinction between the mandatory requirements for the project and any
+# additional requirements that you have that are not critical for the
+# project.
+# 
+# Do not describe the technical details of your project but rather, what
+# functionality and features the project provides for the potential
+# user.
+
+** Core features
+
+   The game will fulfill the minimum requirements as specified in the
+   project description as well as some additional requirements:
+
+  - Mouse input with keyboard shortcuts
+  - Multiple enemy types with different properties (hit points, speed)
+  - Multiple upgradeable tower types: direct, splash and special damage
+  - Easy-to-read, easy-to-edit format for maps
+  - Towers can be placed at any time
+  - Dynamic paths for enemies
+  - Multiple terrain types
+  - Player profiles, player progress
+
+** Additional features
+
+   A subset of these features will be implemented, depending on how
+   much time the core features will take.
+
+  - Fast-forward: When nothing interesting is happening, the player
+    may speed up the game
+  - Checkpoints: Player may return to a checkpoint instead of having
+    to start the level over in case of seriously suboptimal tower
+    placement.
+  - Different firing strategies for towers: Sort the enemies by
+    several properties: shortest remaining path to goal, speed, hit
+    points, maximum hit points.
+  - Tower statistics: See how much damage each tower has inflicted
+  - Multiple entry and exit points
+  - Scrollable maps
+  - Graphical map editor
+
+* Program architecture
+
+The game will have a traditional game loop for the actual game. 
+
+The non-game screens (menu, options) will be...
+
+# This section describes how you intend to fulfill the requirements
+# specified in the previous section. The high-level architecture of your
+# program should be described in this section by the use of some form of
+# diagrams. The diagrams need not be in UML, they should clarify and
+# summarise the structure of your project. Depending on your topic, you
+# might want to describe the structure and operation of your project
+# separately.
+# 
+# Do not write source code here. If absolutely necessary, you can
+# include some parts of your interfaces or the core classes here, but
+# the amount of source code should be kept to a minimum.
+# 
+# Include a short rationale or a discussion concerning the architectural
+# decisions that you had to make. Especially alternative solutions to
+# the key problems and possible compromises that had to be made in the
+# design phase.
+
+** Data structures and algorithms
+
+A priority queue to keep track of game events (arrival of enemies,
+damage to enemies)
+
+The map will have an associated graph, which will be used to determine
+the shortest path to the goal for enemies using a shortest-path
+algorithm such as Dijkstra's algorithm.
+
+** Class structure
+*** Map
+    Methods for reading (and writing?) maps, keeps track of towers and waves of enemies. 
+*** Tower
+    Virtual base class for towers
+*** Projectile
+    Visible graphical ammunition for some towers
+*** Mob
+    Virtual base class for mobs
+*** Timer
+    For handling game time / real time (predictable passage of time inside the game)    
+*** Player
+    Player profile stores the progress and settings
+*** GameState
+    Base class for gamestates. A gamestate is essentially one screen
+    of the game (e.g. MainMenuState, GameplayState)
+*** GameStateManager
+    Manages a LIFO stack of gamestates.  Updates the topmost state on
+    the stack.
+
+** Persistence and file formats
+
+Settings and player progress will be stored in a SQLite database.
+
+The maps will be stored in an easy-to-edit format in text files, at
+least unless a graphical map editor will be implemented. 
+
+** Problems
+
+  If the number of enemies on the map is large, one possible
+  bottleneck is the dynamic path calculation, which would be done for
+  all enemies at the same time (whenever the player places a tower
+  that might interfere with their route); this could cause a
+  noticeable slowdown. The path-finding could be placed in a separate
+  thread to allow faster processing whenever multiple cores or
+  processors are available, or the time allotted to path-updating
+  could be limited in some fashion. Also, the target selection for
+  towers must be implemented in a sane way, so that only a subset of
+  enemies are considered as possible targets.
+
+  The role of projectiles is not yet completely determined. For damage
+  calculation, it would be easiest to determine the time of the hit
+  when the projectile is fired and then just update the location of
+  the projectile to match the reality. If projectiles are allowed to
+  miss, the situation becomes a bit more complex, as the aiming has to
+  be done in a smart manner at least if some projectiles are slow.
+
+* Task sharing
+
+Discussion over implementation issues during coding will be mostly
+done over IRC. Coding sessions for the whole group will be organized
+if personal schedules allow.
+
+The rough division of tasks is as follows:
+
+  - Joel: User interface, graphics
+  - Joonas: Graphics, game data systems
+  - Ilari: Game logic
+
+# Describe, in this section, how all the tasks necessary for the
+# implementation of the project are to be shared. All members of your
+# group should have a roughly equal share in programming.
+# 
+# Additionally describe the methods of co-operation and the
+# specification of interfaces necessary for the the implementation of
+# the various parts of the project by each group member.
+
+* Testing
+
+# Describe how the individual parts of the program and how the complete
+# project will eventually be tested.
+
+Automated unit tests for individual parts of the program. We will
+recruit a monkey who will want to test our game when it is nearly
+finished.
+
+* Schedule
+
+# Include a rough schedule for your project. Do not go into excessive
+# detail but construct clear milestones and deadlines for your work.
+
+|------+------+--------+-------+-------------------------------------------------------------------|
+| Week | Joel | Joonas | Ilari |                                                                   |
+|------+------+--------+-------+-------------------------------------------------------------------|
+|   44 |      |        |       |                                                                   |
+|   45 |      |        |       | Interface specification + initial implementation                  |
+|   46 |      |        |       | First "playable" prototype                                        |
+|   47 |      |        |       | Finalization of core features, additional features implementation |
+|   48 |      |        |       | Testing and implementation of additional features                 |
+|   49 |      |        |       | Demo                                                              |
+
+  
+* External libraries
+
+We will use ClanLib, as it provides many useful features for a game:
+high-level rendering, collision detection, sprites, etc. The Boost
+libraries can also provide useful tools for many parts of the project,
+for example Boost Test Library can be used to aid in the testing and
+Boost Graph Library can be used to help with the dynamic path
+generation for enemies.
+
+# This is essentially a list of all external libraries that you intend
+# to use.
+
+# Introduction 
+
+# Tower defense games are a genre of semi-passive
+# strategy games where playing can occasionally involve staring
+# blindly on the screen watching enemies being killed in waves by
+# automated towers. Tower defense games were made popular by the many
+# Flash based tower defense games available in the Internet and
+# operating on a Web browser.
+
+# Distinctive features common to tower defense games
+
+# - Enemies moving in waves from some position of a map to another
+# - Player placed towers set on the path of enemies that attack and
+#   destroy the enemies before they reach their goal.
+# - Victory defined as being able to stop most of the enemies and defeat
+#   defined as allowing too many enemies to reach their goal.
+# - Autonomous operation of towers, i.e. they attack enemies without a
+#   command from the player.
+# - Destroyed enemies earn points and credits that allow for more towers
+#   to be placed or existing ones to be upgraded.
+ 
+# Minimum requirements
+ 
+# The minimum requirements form the bare-bone structure of a tower
+# defense game and are not particularly difficult to implement. While
+# a minimum implementation does provide a decent grade with modest
+# effort, higher grades require some additional functionality and
+# features.
+ 
+# - A graphical non-scrolling tower defense game with at least mouse
+#   input.
+# - At least three different towers.
+# - At least three different enemies.
+# - Non-hardcoded maps, i.e. they have to be read from some file in some
+#   format.
+# - The player has to be able to place towers during the game, either
+#   between waves of enemies or without restrictions.
+
+# Optional features and other considerations
+ 
+# Tower defense games are a relatively large genre and there are
+# various additional features and alternatives that can be
+# implemented. Depending on the chosen features the implementation can
+# get technically quite challenging. In particular, allowing waves to
+# be combined or advanced without restrictions can result in a large
+# number of enemies spanning up to thousands, which can have a
+# detrimental effect on performance unless properly implemented.
+ 
+# - One path or multiple paths?
+# - Static paths or dynamic paths that can be altered with the placement
+#   of towers?
+# - Can the towers have other effects beyond inflicting hit damage?
+#   E.g. slowing the opponents or causing damage over a longer period of
+#   time.
+# - Can the towers evolve over time through experience or upgrade?
+# - Are all opponents bound by the paths and/or towers? E.g. can some
+#   opponents jump paths or fly over the towers.
+# - Can some opponents affect the operation of the towers?
+# - Can the operational preferences of a tower be altered by the player?
+#   E.g. to shoot the weakest enemy instead of the first one.
+
+# Libraries
+ 
+# Like in most game subjects, graphics and advanced input are
+# required, thus some external library has to be used. For this,
+# ClanLib is the obvious choice but a general UI library such as Qt
+# can be used as well.
+ 

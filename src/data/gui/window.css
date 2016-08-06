@@ -1,0 +1,82 @@
+window
+{
+	bg-color: #d0d0d0;
+	bg-image:WindowBackdrop;
+	bg-image-sizing:repear;
+ }
+
+window caption
+{
+	bg-image:WindowActive;
+	bg-image-sizing-left:8;
+	bg-image-sizing-right:8;
+	bg-image-sizing-top:6;
+	bg-image-sizing-bottom:0;
+	bg-image-sizing:stretch; 
+	preferred-height:22;
+}
+
+window frameleft
+{
+	bg-image:WindowFrameLeftActive;
+	bg-image-sizing-left:4;
+	bg-image-sizing-right:0;
+	bg-image-sizing-top:0;
+	bg-image-sizing-bottom:0;
+	bg-image-sizing:stretch; 
+	preferred-width:5;
+}
+
+window frameright
+{
+	bg-image:WindowFrameRightActive;
+	bg-image-sizing-left:0;
+	bg-image-sizing-right:4;
+	bg-image-sizing-top:0;
+	bg-image-sizing-bottom:0;
+	bg-image-sizing:stretch; 
+	preferred-width:5;
+}
+
+window framebottom
+{
+	bg-image:WindowFrameBottomActive;
+	bg-image-sizing-left:8;
+	bg-image-sizing-right:8;
+	bg-image-sizing-top:0;
+	bg-image-sizing-bottom:5;
+	bg-image-sizing:stretch; 
+	preferred-height:5;
+}
+
+window label#winloselabel
+{
+    font-size: 72;
+}
+
+window#stats buttonclose
+{
+	preferred-width:25;
+	preferred-height:15;
+	bg-image-sizing:center; 
+}
+
+window buttonclose:normal
+{
+	bg-image:WindowCloseButtonActiveNormal; 
+}
+
+window buttonclose:hot
+{
+	bg-image:WindowCloseButtonActiveHot; 
+}
+
+window buttonclose:pressed
+{
+	bg-image:WindowCloseButtonActivePressed; 
+}
+
+window buttonclose:disabled
+{
+	bg-image:WindowCloseButtonActiveDisabled;
+}

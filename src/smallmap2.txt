@@ -1,0 +1,113 @@
+!LEVEL
+
+.level {
+	name=the entrance
+	number=2
+}
+	
+.map {
+	width=32
+	height=13
+
+	################################
+	#...................#..........#
+	1...................#..........#
+	#..........#........#......###.#
+	#..........#........#......#...#
+	#..........#........#......#.###
+	0..........#...............#..E#
+	#..........#...............#####
+	#..........#...................#
+	#..........#...................#
+	#..............................#
+	#..............................#
+	################################
+}
+
+.wave {
+	wave_interval=3
+
+	.mob {
+		number=3
+		type=basic
+		level=2
+		entrance=0
+		enemy_interval=3
+	}
+
+	.mob {
+		number=3
+		type=basic
+		level=1
+		entrance=1
+		enemy_interval=1
+	}
+}
+
+.wave {
+	wave_interval=5
+
+	.mob {
+		number=35
+		type=basic
+		level=2
+		entrance=0
+		enemy_interval=2
+	}
+
+	.mob {
+		number=55
+		type=basic
+		level=4
+		entrance=1
+		enemy_interval=1
+	}
+}
+
+.wave {
+	wave_interval=2
+
+	.mob {
+		number=20
+		type=basic
+		level=2
+		entrance=0
+		enemy_interval=2
+	}
+
+	.mob {
+		number=60
+		type=basic
+		level=4
+		entrance=1
+		enemy_interval=1
+	}
+
+	.mob {
+		number=60
+		type=basic
+		level=4
+		entrance=1
+		enemy_interval=1
+	}
+}
+
+.wave {
+	wave_interval=4
+
+	.mob {
+		number=20
+		type=basic
+		level=2
+		entrance=0
+		enemy_interval=2
+	}
+
+	.mob {
+		number=100
+		type=basic
+		level=4
+		entrance=1
+		enemy_interval=1
+	}
+}

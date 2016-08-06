@@ -1,0 +1,140 @@
+!LEVEL
+
+.level 
+{
+	name=the entrance
+	number=1
+}
+	
+.map {
+	width=25
+	height=13
+
+	#########################
+	#SSSSSSSSSSSSSSSSSSSSSSS#
+	#SSSSSSSSSSSSSSGGGGGGSSS#
+	#SSSSS          GGGGGGGS#
+	#SR      E      GGGGGSSS#
+	#SR             GGGGGSSS#
+	#SR     GRS          RSS#
+	#SR                  RSS#
+	#SSSGGGGGGSSWW       RSS#
+	2                    RSS#
+	#RRRRRSSGGGS         RRR#
+	1                   RRRR#
+	#########################
+}
+
+.wave
+{
+	wave_interval=30.1
+
+	.mob
+	{
+		number=4
+		type=orc
+		level=2
+		entrance=2
+		enemy_interval=1.3
+	}
+
+	.mob
+	{
+		number=4
+		type=peasant
+		level=1
+		entrance=1
+		enemy_interval=1.2
+		}
+}
+
+.wave
+{
+	wave_interval=3.20
+
+	.mob
+	{
+		number=4
+		type=zombie
+		level=1
+		entrance=1
+		enemy_interval=2.4
+	}
+}
+
+.wave
+{
+	wave_interval=30.1
+
+	.mob
+	{
+		number=4
+		type=orc
+		level=2
+		entrance=2
+		enemy_interval=1.3
+	}
+
+	.mob
+	{
+		number=4
+		type=peasant
+		level=1
+		entrance=1
+		enemy_interval=1.2
+	}
+
+	.mob
+	{
+		number=4
+		type=orc
+		level=2
+		entrance=2
+		enemy_interval=1.3
+	}
+
+	.mob
+	{
+		number=4
+		type=peasant
+		level=1
+		entrance=1
+		enemy_interval=1.2
+	}
+
+	.mob
+	{
+		number=4
+		type=orc
+		level=2
+		entrance=2
+		enemy_interval=1.3
+	}
+
+	.mob
+	{
+		number=4
+		type=peasant
+		level=1
+		entrance=1
+		enemy_interval=1.2
+	}
+
+	.mob
+	{
+		number=4
+		type=orc
+		level=2
+		entrance=2
+		enemy_interval=1.3
+	}
+
+	.mob
+	{
+		number=4
+		type=peasant
+		level=1
+		entrance=1
+		enemy_interval=1.2
+	}
+}
